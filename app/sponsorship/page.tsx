@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import CtaBand from "@/components/CtaBand";
 import PageHeader from "@/components/PageHeader";
 import Sponsorship from "@/components/Sponsorship";
+import StallBooking from "@/components/StallBooking";
 
 export const metadata: Metadata = {
   title: "Sponsorship",
@@ -18,6 +19,7 @@ export default function SponsorshipPage() {
         image="/images/sponsorship.jpeg"
       />
       <Sponsorship />
+      <StallBooking />
       <CtaBand
         title="Let's build something great"
         text="Talk to the AUC team about the right package for your brand."

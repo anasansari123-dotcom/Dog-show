@@ -74,16 +74,25 @@ function VideoCard({ v, i }: { v: (typeof VIDEOS)[number]; i: number }) {
   );
 }
 
-export default function Videos() {
+export default function Videos({ light = false }: { light?: boolean }) {
   return (
-    <section id="videos" className="grain relative overflow-hidden bg-gradient-to-b from-navy to-navy-2 py-24 text-white md:py-32">
-      <div className="absolute -left-20 top-1/3 h-80 w-80 rounded-full bg-auc-green/30 blur-[100px]" />
-      <div className="absolute -right-20 bottom-10 h-80 w-80 rounded-full bg-auc-amber/20 blur-[100px]" />
+    <section
+      id="videos"
+      className={`relative overflow-hidden py-24 md:py-32 ${
+        light ? "bg-white text-navy" : "grain bg-gradient-to-b from-navy to-navy-2 text-white"
+      }`}
+    >
+      {!light && (
+        <>
+          <div className="absolute -left-20 top-1/3 h-80 w-80 rounded-full bg-auc-green/30 blur-[100px]" />
+          <div className="absolute -right-20 bottom-10 h-80 w-80 rounded-full bg-auc-amber/20 blur-[100px]" />
+        </>
+      )}
       <div className="relative mx-auto max-w-7xl px-5 md:px-8">
         <SectionHeading
-          dark
+          dark={!light}
           eyebrow="Watch"
-          title={<>Moments from the <span className="text-gold-gradient">Ring</span></>}
+          title={<>Moments from the <span className={light ? "text-brand-gradient" : "text-gold-gradient"}>Ring</span></>}
           subtitle="Hover or tap to play. Turn on sound for the full experience."
         />
         <div className="grid gap-10 pt-6 sm:grid-cols-2 lg:grid-cols-3">

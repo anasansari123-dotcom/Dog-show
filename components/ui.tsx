@@ -3,13 +3,16 @@
 import { motion, useScroll, useSpring } from "framer-motion";
 import {
   PawPrint, Trophy, Users, BookOpen, Handshake, Medal, Heart, Target, Mic, House, Store, Crown,
-  Gavel, ClipboardList, Stethoscope, UtensilsCrossed, Camera, Car, type LucideIcon,
+  Gavel, ClipboardList, Stethoscope, UtensilsCrossed, Camera, Car, Shirt, Gift, Dog, Cat, Bird, Fish,
+  Turtle, ShoppingCart, Megaphone, TrendingUp, Award, Smartphone, Banknote, Wallet, Syringe, CalendarDays,
+  type LucideIcon,
 } from "lucide-react";
 import type { ReactNode } from "react";
 
 const ICONS: Record<string, LucideIcon> = {
   PawPrint, Trophy, Users, BookOpen, Handshake, Medal, Heart, Target, Mic, House, Store, Crown,
-  Gavel, ClipboardList, Stethoscope, UtensilsCrossed, Camera, Car,
+  Gavel, ClipboardList, Stethoscope, UtensilsCrossed, Camera, Car, Shirt, Gift, Dog, Cat, Bird, Fish,
+  Turtle, ShoppingCart, Megaphone, TrendingUp, Award, Smartphone, Banknote, Wallet, Syringe, CalendarDays,
 };
 
 /** Fade/slide content in once it scrolls into view. */

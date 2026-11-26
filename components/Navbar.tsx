@@ -34,22 +34,22 @@ export default function Navbar() {
       className="fixed inset-x-0 top-0 z-50 px-3 pt-3 md:px-6"
     >
       <nav
-        className={`mx-auto flex max-w-7xl items-center justify-between rounded-2xl px-4 py-2.5 transition-all duration-500 md:px-6 ${
-          scrolled ? "bg-white/90 shadow-xl shadow-navy/10 backdrop-blur-xl" : "bg-white/80 backdrop-blur-md"
+        className={`mx-auto flex max-w-7xl items-center justify-between gap-3 rounded-2xl px-4 py-2.5 transition-all duration-500 md:px-5 xl:px-6 ${
+          scrolled ? "bg-white shadow-xl shadow-navy/15" : "bg-white/95 shadow-lg shadow-black/10 backdrop-blur-md"
         }`}
       >
-        <Link href="/" className="flex items-center gap-3" aria-label="AUC Foundation home">
-          <Image src="/images/logo-transparent.png" alt="AUC Foundation logo" width={132} height={48} className="h-10 w-auto md:h-12" priority />
+        <Link href="/" className="flex shrink-0 items-center gap-3" aria-label="AUC Foundation home">
+          <Image src="/images/logo-transparent.png" alt="AUC Foundation logo" width={132} height={48} className="h-10 w-auto xl:h-12" priority />
         </Link>
 
-        <ul className="hidden items-center gap-1 lg:flex">
+        <ul className="hidden items-center gap-1 lg:flex min-[1150px]:gap-2.5 xl:gap-3">
           {NAV_LINKS.map((l) => {
             const active = isActive(l.href);
             return (
               <li key={l.href}>
                 <Link
                   href={l.href}
-                  className={`relative block rounded-full px-4 py-2 text-sm font-semibold transition ${
+                  className={`relative block whitespace-nowrap rounded-full px-2.5 py-2 text-[13px] font-semibold transition xl:px-3.5 xl:text-sm ${
                     active ? "text-white" : "text-navy/80 hover:text-auc-blue"
                   }`}
                 >
@@ -67,12 +67,13 @@ export default function Navbar() {
           })}
         </ul>
 
-        <div className="flex items-center gap-2">
+        <div className="flex shrink-0 items-center gap-2">
           <Link
             href="/register"
-            className="btn-gold hidden items-center gap-2 rounded-full px-5 py-2.5 text-sm font-bold transition hover:scale-105 sm:inline-flex"
+            className="btn-gold hidden items-center gap-2 whitespace-nowrap rounded-full px-5 py-2.5 text-sm font-bold transition hover:scale-105 sm:inline-flex lg:px-4 xl:px-5"
           >
-            <PawPrint className="h-4 w-4" /> Register Now
+            <PawPrint className="h-4 w-4" /> <span className="lg:hidden xl:inline">Register Now</span>
+            <span className="hidden lg:inline xl:hidden">Register</span>
           </Link>
           <button onClick={() => setOpen((o) => !o)} className="rounded-xl p-2 text-navy lg:hidden" aria-label="Toggle menu">
             {open ? <X /> : <Menu />}
