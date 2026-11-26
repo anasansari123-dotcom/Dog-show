@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
-import Contact from "@/components/Contact";
+import Contact, { Invitation } from "@/components/Contact";
 import PageHeader from "@/components/PageHeader";
+import Register from "@/components/Register";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: "Contact the AUC Foundation organising team — Rahul Singh (President) and Rahul Ratan Maurya (General Secretary).",
+  description:
+    "Contact the AUC Foundation organising team — Rahul Singh (President) and Rahul Ratan Maurya (General Secretary) — and send your dog or cat entry on WhatsApp.",
 };
 
 export default function ContactPage() {
@@ -18,6 +20,8 @@ export default function ContactPage() {
         dark
       />
       <Contact />
+      <Register />
+      <Invitation />
     </>
   );
 }

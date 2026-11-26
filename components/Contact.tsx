@@ -49,10 +49,17 @@ export default function Contact() {
             </div>
           </Reveal>
         </div>
+      </div>
+    </section>
+  );
+}
 
-        {/* Invitation CTA */}
-        <Reveal className="mt-16">
-          <div className="grid items-center gap-8 overflow-hidden rounded-[2rem] bg-cream text-navy md:grid-cols-[auto_1fr]">
+export function Invitation() {
+  return (
+    <section id="invitation" className="pb-24 md:pb-28">
+      <div className="mx-auto max-w-7xl px-5 md:px-8">
+        <Reveal>
+          <div className="grid items-center gap-8 overflow-hidden rounded-[2rem] border border-slate-200 bg-cream text-navy shadow-xl shadow-navy/5 md:grid-cols-[auto_1fr]">
             <Image src="/images/invitation.jpeg" alt="Special guest invitation" width={1060} height={1484} className="h-72 w-full object-cover object-top md:h-80 md:w-60" />
             <div className="p-8 md:pl-0">
               <p className="text-xs font-semibold uppercase tracking-[0.3em] text-auc-blue">You&apos;re invited</p>

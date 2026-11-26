@@ -10,8 +10,8 @@ import { Reveal, SectionHeading } from "./ui";
 const STEPS = [
   { icon: ClipboardList, title: "Fill the form", text: "Dog or cat details" },
   { icon: Send, title: "Send on WhatsApp", text: "One tap, pre-filled" },
-  { icon: Wallet, title: "Pay the fee", text: "UPI or cash", href: "#payment" },
-  { icon: Syringe, title: "Bring vaccination card", text: "Anti-Rabies mandatory", href: "#vaccination" },
+  { icon: Wallet, title: "Pay the fee", text: "Scan QR & pay", href: "/register#payment" },
+  { icon: Syringe, title: "Bring vaccination card", text: "Anti-Rabies mandatory", href: "/register#vaccination" },
 ];
 
 type Field = {
@@ -114,11 +114,10 @@ export default function Register() {
                     </motion.div>
                     <h3 className="mt-6 font-display text-3xl font-bold text-navy">Almost there!</h3>
                     <p className="mt-3 max-w-md text-slate-600">
-                      Your entry details have opened in WhatsApp. Press send, then complete the {fee} fee payment (Cash / UPI) as guided by
-                      our team.
+                      Your entry details have opened in WhatsApp. Press send, then pay the {fee} entry fee by scanning the QR on the Register page.
                     </p>
-                    <a href="#payment" className="mt-4 text-sm font-bold text-auc-blue underline-offset-4 hover:underline">
-                      See payment steps ↓
+                    <a href="/register#payment" className="btn-gold mt-6 inline-flex items-center gap-2 rounded-full px-7 py-3.5 font-bold transition hover:scale-105">
+                      <Wallet className="h-5 w-5" /> Proceed to Payment →
                     </a>
                     <button onClick={() => setSent(false)} className="mt-8 rounded-full border-2 border-navy px-6 py-3 font-bold text-navy transition hover:bg-navy hover:text-white">
                       Register another {kind}

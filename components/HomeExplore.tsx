@@ -20,7 +20,7 @@ const PAGES = [
   { href: "/participate", title: "Participate", text: "Categories, rules, FAQs & handler facility.", image: "/images/poster-hindi.jpeg", pos: "object-top", accent: "from-auc-amber" },
   { href: "/sponsorship", title: "Sponsorship", text: "Packages from ₹5,000 to ₹2,50,000 for brands.", image: "/images/sponsorship.jpeg", pos: "object-top", accent: "from-[#7a1426]" },
   { href: "/gallery", title: "Gallery & Videos", text: "Photos from our last show, posters & videos.", image: "/images/past-show/gsd-stacked.jpg", pos: "object-center", accent: "from-auc-green" },
-  { href: "/register", title: "Register Now", text: "Send your entry online in under 2 minutes.", image: "/images/entry-form.jpeg", pos: "object-top", accent: "from-auc-blue" },
+  { href: "/contact#register", title: "Register Now", text: "Send your entry online in under 2 minutes.", image: "/images/entry-form.jpeg", pos: "object-top", accent: "from-auc-blue" },
 ];
 
 export default function HomeExplore() {

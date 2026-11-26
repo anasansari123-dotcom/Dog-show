@@ -356,6 +356,11 @@ export const CATEGORIES = [
 export const PAYMENT = {
   upiId: "", // e.g. "aucfoundation@upi"
   upiName: "AUC Foundation",
+  qr: {
+    image: "/images/phonepe-qr.png",
+    payee: "Rahul Ratan Maurya",
+    app: "PhonePe",
+  },
   bank: null as null | { accountName: string; accountNo: string; ifsc: string; bankName: string },
   methods: [
     { icon: "Smartphone", title: "UPI", text: "Google Pay, PhonePe, Paytm or any UPI app." },
@@ -367,9 +372,9 @@ export const PAYMENT = {
     { label: "Exhibition / Sales Stall", amount: "₹10,000" },
   ],
   notes: [
-    "Send your entry on WhatsApp first — our team confirms it and shares payment details.",
+    "Send your entry on WhatsApp first, then scan the QR code with any UPI app to pay the fee.",
     "Pay before the last date for entry (10 December 2026).",
-    "After paying, send the screenshot / transaction ID on the same WhatsApp chat.",
+    "After paying, tap “Share Screenshot” and send the payment screenshot on WhatsApp +91 93355 52233.",
     "Entry fee is non-refundable under any circumstances.",
   ],
 };
